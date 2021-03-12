@@ -16,7 +16,7 @@ class SrpApplicationTests {
         j.addEntry("Ran a test today.");
         j.addEntry("Wrote a file today.");
 
-        repo.saveToFile(j, "test.txt", true);
+        repo.saveToFile(j, "test.txt");
     }
 
 }

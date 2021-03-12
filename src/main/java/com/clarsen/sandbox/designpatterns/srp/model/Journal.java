@@ -1,41 +1,41 @@
 package com.clarsen.sandbox.designpatterns.srp.model;
 
-import java.io.FileNotFoundException;
-import java.io.PrintStream;
 import java.util.ArrayList;
-import java.util.List;
 
-//
-//
 /**
- * A class to hold thought entries the journal class will be the container to
- * hold all the entries - addEntry(String): add entry to entries list - add
- * entry - increament number of entries - removeEntry(int) - remove entry at
- * index - decreament number of entries
+ * A class to manage journal entries
+ *
  */
-public class Journal {
-    private final List<String> entries = new ArrayList<>();
+public class Journal extends ArrayList<String> {
+    private static final long serialVersionUID = -5814343938564794413L;
     private static int nrOfEntries = 0;
 
+    /**
+     * Adds an entry to the Journal
+     *
+     * @param text - Text to save in the Journal
+     */
     public void addEntry(String text) {
-        entries.add(String.format("%d: %s", ++nrOfEntries, text));
+        this.add(String.format("%d: %s", ++nrOfEntries, text));
     }
 
+    /**
+     * Adds an entry to the Journal
+     *
+     * @param index - Position of the to remove in the Journal
+     */
     public void removeEntry(int index) {
-        entries.remove(index);
+        this.remove(index);
     }
 
+    /**
+     * Prints the entries of the journal in a numerical list.
+     *
+     *@return The String representation of the Journal object
+     */
     @Override
     public String toString() {
-        return String.join(System.lineSeparator(), entries);
+        return String.join(System.lineSeparator(), this);
     }
-
-    // violates the single responsibility principle since the journal is now handling the 'saving' of the journal
-    // this method is better moved to its own class inorder to seperate concerns
-    // public void save(String filenam) throws FileNotFoundException {
-    //     try (PrintStream out = new PrintStream(filenam)) {
-    //         out.println(toString());
-    //     }
-    // }
 
 }

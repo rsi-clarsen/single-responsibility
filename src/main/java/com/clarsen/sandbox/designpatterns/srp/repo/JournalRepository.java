@@ -1,18 +1,26 @@
 package com.clarsen.sandbox.designpatterns.srp.repo;
 
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
 
 import com.clarsen.sandbox.designpatterns.srp.model.Journal;
 
-// handles the persistance to disk for the Journal class
+/**
+ *  Writes a Journal object to disk
+ */
 public class JournalRepository {
-    public void saveToFile(Journal journal, String filename, boolean overwrite) throws FileNotFoundException {
-        if(overwrite || new File(filename).exists()) {
-            try (PrintStream out = new PrintStream(filename)) {
-                out.println(journal.toString());
-            }
+
+    /**
+     * Writes the Journal object to disk
+     *
+     * @param journal to write
+     * @param filename name of the file to write
+     * @throws FileNotFoundException
+     */
+    public void saveToFile(Journal journal, String filename) throws FileNotFoundException {
+        try (PrintStream out = new PrintStream(filename)) {
+            out.println(journal.toString());
         }
     }
+
 }
