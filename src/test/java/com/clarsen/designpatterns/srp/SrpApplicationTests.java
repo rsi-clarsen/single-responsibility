@@ -1,7 +1,7 @@
-package com.clarsen.sandbox.designpatterns.srp;
+package com.clarsen.designpatterns.srp;
 
-import com.clarsen.sandbox.designpatterns.srp.model.Journal;
-import com.clarsen.sandbox.designpatterns.srp.repo.JournalRepository;
+import com.clarsen.designpatterns.srp.model.Journal;
+import com.clarsen.designpatterns.srp.repo.JournalRepository;
 
 import org.junit.jupiter.api.Test;
 

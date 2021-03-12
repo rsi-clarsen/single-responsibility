@@ -1,4 +1,4 @@
-package com.clarsen.sandbox.designpatterns.srp.model;
+package com.clarsen.designpatterns.srp.model;
 
 import java.util.ArrayList;
 

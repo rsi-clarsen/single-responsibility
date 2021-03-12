@@ -1,4 +1,4 @@
-package com.clarsen.sandbox.designpatterns.srp;
+package com.clarsen.designpatterns.srp;
 
 public class SrpApplication {
 

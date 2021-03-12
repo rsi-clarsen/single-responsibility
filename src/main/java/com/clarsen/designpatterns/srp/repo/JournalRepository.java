@@ -1,9 +1,9 @@
-package com.clarsen.sandbox.designpatterns.srp.repo;
+package com.clarsen.designpatterns.srp.repo;
 
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
 
-import com.clarsen.sandbox.designpatterns.srp.model.Journal;
+import com.clarsen.designpatterns.srp.model.Journal;
 
 /**
  *  Writes a Journal object to disk
