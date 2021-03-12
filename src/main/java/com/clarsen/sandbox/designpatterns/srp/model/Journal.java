@@ -22,16 +22,16 @@ public class Journal extends ArrayList<String> {
     /**
      * Adds an entry to the Journal
      *
-     * @param index - Position of the to remove in the Journal
+     * @param index - Position of the entry to remove in the Journal
      */
     public void removeEntry(int index) {
         this.remove(index);
     }
 
     /**
-     * Prints the entries of the journal in a numerical list.
+     * Prints the entries of the journal to a list
      *
-     *@return The String representation of the Journal object
+     * @return The String representation of the Journal object
      */
     @Override
     public String toString() {
